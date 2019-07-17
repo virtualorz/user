@@ -27,7 +27,7 @@ class User
     public function getProp($key){
 
         if(session(env('LOGINSESSION','virtualorz_default')) != null){
-            return session(env('LOGINSESSION','virtualorz_default.').$key);
+            return session(env('LOGINSESSION','virtualorz_default').'.'.$key);
         }
 
         return null;
