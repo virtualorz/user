@@ -33,4 +33,23 @@ class User
         return null;
     }
 
+    /**
+     * 設定session參數值
+     */
+    public function set($key,$value){
+        if(session(env('LOGINSESSION','virtualorz_default').'.login_user') != null){
+            session([env('LOGINSESSION','virtualorz_default').'.login_user.'.$key => $value]);
+        }
+    }
+
+    /**
+     * 設定Session參數值
+     */
+    public function setProp($key,$value){
+
+        if(session(env('LOGINSESSION','virtualorz_default')) != null){
+            session([env('LOGINSESSION','virtualorz_default').'.'.$key=>$value]);
+        }
+    }
+
 }

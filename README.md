@@ -24,3 +24,9 @@ edit config/app.php
 
 ###### getProp($key)
     return array of session $key
+
+###### set($key,$value)
+    set the sesssion value under login_user
+
+###### setProp($key,$value)
+    set the session value
