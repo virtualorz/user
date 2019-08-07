@@ -47,9 +47,7 @@ class User
      */
     public function setProp($key,$value){
 
-        if(session(env('LOGINSESSION','virtualorz_default')) != null){
-            session([env('LOGINSESSION','virtualorz_default').'.'.$key=>$value]);
-        }
+        session([env('LOGINSESSION','virtualorz_default').'.'.$key=>$value]);
     }
 
 }
